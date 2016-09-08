@@ -46,7 +46,9 @@ var axisScale = d3.scaleLinear()
     .domain([0, containerHeight])
     .range([0, containerHeight]);
 var yAxis = d3.axisLeft().scale(axisScale);
+
 var yAxisGroup = scaleContainer.append("g")
+    .attr("transform", "translate("+50+",0)")
     .call(yAxis);
 
 var images = actionContainer.selectAll("image")
